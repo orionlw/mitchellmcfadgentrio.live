@@ -1,13 +1,13 @@
 links:
   - title: Contact
     url: ./contact
-    desc: Contact Us
+    desc: Get in touch for bookings
   - title: Music
     url: ./music
-    desc: 
+    desc: Check out our sound
   - title: Events
     url: ./events
-    desc: 
+    desc: Upcoming gigs
   - title: Gallery
     url: ./photos
-    desc:
+    desc: The looks
