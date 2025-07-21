@@ -21,11 +21,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addCollection("videos", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("_data/music/*.md");
+    return collectionApi.getFilteredByGlob("/music/*.md");
   });
 
     eleventyConfig.addCollection("events", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("_data/events/*.md").sort((a, b) => {
+    return collectionApi.getFilteredByGlob("/events/*.md").sort((a, b) => {
       return new Date(a.data.date) - new Date(b.data.date); // Sort by date ascending
     });
   });
