@@ -15,7 +15,7 @@ local_backend: true
 collections:
   - name: "photos"
     label: "Photo Gallery"
-    folder: "photos"
+    folder: "src/photos"
     create: true
     slug: "{{slug}}"
     fields:
@@ -24,7 +24,7 @@ collections:
       - { name: "description", label: "Description", widget: "text", required: false }
   - name: "events"
     label: "Events"
-    folder: "events"
+    folder: "src/events"
     create: true
     slug: "{{slug}}"
     fields:
@@ -35,7 +35,7 @@ collections:
       - { name: "url", label: "Event URL", widget: "string", required: false }
   - name: "music"
     label: "Music Videos"
-    folder: "music"
+    folder: "src/music"
     create: true
     slug: "{{slug}}"
     fields:
