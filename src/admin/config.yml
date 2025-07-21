@@ -12,6 +12,17 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "location", label: "Location", widget: "string" }
+      - { name: "description", label: "Description", widget: "text", required: false }
+      - { name: "url", label: "Event URL", widget: "string", required: false }
   - name: "videos"
     label: "Music Videos"
     folder: "content/videos"
