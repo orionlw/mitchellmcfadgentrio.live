@@ -5,7 +5,7 @@ items:
   - text: Music
     url: "/music"
   - text: Photos
-    url "/photos"
+    url: "/photos"
   - text: Events
     url: "/events"
   - text: Contact
