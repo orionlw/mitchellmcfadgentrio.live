@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./**/*.html"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
     container: {
       center: true,
@@ -11,3 +11,5 @@ module.exports = {
   variants: {},
   plugins: [require("@tailwindcss/typography")],
 };
+
+
