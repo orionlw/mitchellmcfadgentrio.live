@@ -1,0 +1,19 @@
+---
+title: "Mitchell McFadgen Trio - Live Music"
+layout: default
+---
+
+<h1>{{ title }}</h1>
+<p>All videos from our <a href="https://www.youtube.com/playlist?list=PLTBfpswKxQYu55UfDMUhaX9NMDDaXVh9Y" target="_blank">YouTube Playlist</a></p>
+<div class="videos">
+  {% for video in collections.videos %}
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/{{ video.data.youtube_id }}" allowfullscreen></iframe>
+      <div class="title">{{ video.data.title }}</div>
+      {% if video.data.description %}
+        <div class="desc">{{ video.data.description }}</div>
+      {% endif %}
+      <a class="yt-link" href="https://www.youtube.com/watch?v={{ video.data.youtube_id }}" target="_blank">Watch on YouTube</a>
+    </div>
+  {% endfor %}
+</div>

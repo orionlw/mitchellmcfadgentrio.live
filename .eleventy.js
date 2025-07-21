@@ -20,6 +20,11 @@ module.exports = function (eleventyConfig) {
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addCollection("videos", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("_data/music/*.md");
+  });
+
+
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
