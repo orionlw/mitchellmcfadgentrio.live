@@ -1,5 +1,5 @@
 ---
-title: "Live at the Jazz Lounge #1"
-youtube_id: "4J2F3A1K3Ls"
-description: "Mitchell McFadgen Trio performing live."
+title: "Live at Trident"
+youtube_id: "Ts-ZZBCcylM"
+description: "Mitchell McFadgen Trio performing If Only Your Love"
 ---
