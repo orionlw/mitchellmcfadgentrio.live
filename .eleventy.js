@@ -29,6 +29,10 @@ module.exports = function (eleventyConfig) {
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addCollection("photos", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/photos/*.md");
+  });
+
   eleventyConfig.addCollection("videos", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/music/*.md");
   });

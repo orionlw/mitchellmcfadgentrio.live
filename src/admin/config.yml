@@ -11,10 +11,20 @@ public_folder: "/static/img"
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
+
 collections:
+  - name: "photos"
+    label: "Photo Gallery"
+    folder: "photos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "description", label: "Description", widget: "text", required: false }
   - name: "events"
     label: "Events"
-    folder: "content/events"
+    folder: "events"
     create: true
     slug: "{{slug}}"
     fields:
@@ -23,9 +33,9 @@ collections:
       - { name: "location", label: "Location", widget: "string" }
       - { name: "description", label: "Description", widget: "text", required: false }
       - { name: "url", label: "Event URL", widget: "string", required: false }
-  - name: "videos"
+  - name: "music"
     label: "Music Videos"
-    folder: "content/videos"
+    folder: "music"
     create: true
     slug: "{{slug}}"
     fields:

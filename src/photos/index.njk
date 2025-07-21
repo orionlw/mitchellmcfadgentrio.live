@@ -1,0 +1,17 @@
+---
+title: "Photo Gallery"
+layout: "default"
+---
+
+<h1>{{ title }}</h1>
+<div class="gallery" style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center;">
+  {% for photo in collections.photos %}
+    <div class="photo" style="background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0002; padding: 1em; width: 350px;">
+      <img src="{{ photo.data.image }}" alt="{{ photo.data.title }}" style="width: 100%; border-radius: 8px;"/>
+      <div class="title" style="font-size: 1.1em; margin: 0.5em 0;">{{ photo.data.title }}</div>
+      {% if photo.data.description %}
+        <div class="desc" style="font-size: 0.95em;">{{ photo.data.description }}</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
