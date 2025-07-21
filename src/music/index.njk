@@ -4,9 +4,6 @@ layout: default
 ---
 
 <h1>{{ title }}</h1>
-<p style="text-align:center;">
-  All videos from our <a href="https://www.youtube.com/playlist?list=PLTBfpswKxQYu55UfDMUhaX9NMDDaXVh9Y" target="_blank">YouTube Playlist</a>
-</p>
 <div class="videos" style="display:flex; flex-wrap:wrap; justify-content:center; gap:2em;">
   {% for video in collections.videos %}
     <div class="video" style="background:#fff; border-radius:8px; box-shadow:0 2px 8px #0002; padding:1em; width:350px;">
