@@ -4,6 +4,15 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addFilter("date", function(dateObj) {
+  return new Date(dateObj).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+});
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
@@ -21,11 +30,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addCollection("videos", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("/music/*.md");
+    return collectionApi.getFilteredByGlob("./src/music/*.md");
   });
 
     eleventyConfig.addCollection("events", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("/events/*.md").sort((a, b) => {
+    return collectionApi.getFilteredByGlob("./src/events/*.md").sort((a, b) => {
       return new Date(a.data.date) - new Date(b.data.date); // Sort by date ascending
     });
   });
