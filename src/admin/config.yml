@@ -14,7 +14,7 @@ local_backend: true
 
 collections:
   - name: "photos"
-    label: "Photo Gallery"
+    label: "Photos"
     folder: "src/photos"
     create: true
     slug: "{{slug}}"
