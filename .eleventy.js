@@ -24,6 +24,12 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("_data/music/*.md");
   });
 
+    eleventyConfig.addCollection("events", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("_data/events/*.md").sort((a, b) => {
+      return new Date(a.data.date) - new Date(b.data.date); // Sort by date ascending
+    });
+  });
+
 
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON

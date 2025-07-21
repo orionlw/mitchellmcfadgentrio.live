@@ -1,0 +1,25 @@
+---
+title: "Events"
+layout: "default"
+---
+
+<h1>{{ title }}</h1>
+<div class="events-list">
+  {% for event in collections.events %}
+    <div class="event" style="background:#fff; border-radius:8px; box-shadow:0 2px 8px #0002; padding:1em; margin-bottom:2em;">
+      <div class="event-title" style="font-size:1.2em; font-weight:bold;">{{ event.data.title }}</div>
+      <div class="event-date-location" style="color:#666;">
+        <span>{{ event.data.date | date("dddd, MMMM D, YYYY h:mm A") }}</span>
+        {% if event.data.location %}
+          &nbsp;|&nbsp; <span>{{ event.data.location }}</span>
+        {% endif %}
+      </div>
+      {% if event.data.description %}
+        <div class="event-desc" style="margin:0.5em 0;">{{ event.data.description }}</div>
+      {% endif %}
+      {% if event.data.url %}
+        <a class="event-link" href="{{ event.data.url }}" target="_blank" style="font-size:0.95em;">More info</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
