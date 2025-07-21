@@ -1,5 +1,5 @@
 ---
-title: Thursday Circuit Breaker at Good Robot
+title: Thursday Circuit Breaker at Good Robot (8PM)
 date: 2025-07-31T19:00:00
 location: Good Robot on Robie Street
 description: Join us every Thursday night in the Good Robot Taproom for Circuit
