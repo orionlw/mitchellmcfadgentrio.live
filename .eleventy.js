@@ -119,6 +119,35 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "image",
+    async function (
+      src,
+      alt,
+      widths = [320, 640, 1024],
+      formats = ["webp", "jpeg"],
+    ) {
+      if (!alt) throw new Error(`Missing \`alt\` for image: ${src}`);
+      let metadata = await Image(src, {
+        widths: widths,
+        formats: formats,
+        urlPath: "/static/img/",
+        outputDir: "./_site/static/img/",
+        cacheOptions: {
+          duration: "1y",
+          directory: ".cache", // You can change this if you want
+        },
+      });
+      let imageAttrs = {
+        alt,
+        sizes: "(max-width: 1024px) 100vw, 1024px",
+        loading: "lazy",
+        decoding: "async",
+      };
+      return Image.generateHTML(metadata, imageAttrs);
+    },
+  );
+
   // Directory config and template engine
   return {
     dir: {
