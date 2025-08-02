@@ -1,7 +1,7 @@
 ---
-title: The Jazz Spotlight at Gus’ Pub (June 11th, 2025, 8-11)
+title: The Jazz Spotlight at Gus’ Pub (8-11pm)
 date: 2025-06-11T20:00:00
 location: Gus’ Pub
-description: Trio featured at The Jazz Spotlight at Gus’ Pub, June 11th, 2025, 8-11 PM.
+description: ""
 url: ""
 ---

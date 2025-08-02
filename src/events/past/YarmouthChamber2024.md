@@ -1,7 +1,7 @@
 ---
-title: Yarmouth Chamber of Commerce (July 2024)
+title: Yarmouth Chamber of Commerce
 date: 2024-07-01T19:00:00
 location: Yarmouth Chamber of Commerce
-description: Trio performance for the Yarmouth Chamber of Commerce in July 2024.
+description: ""
 url: ""
 ---
