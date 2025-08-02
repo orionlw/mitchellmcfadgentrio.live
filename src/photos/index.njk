@@ -3,14 +3,16 @@ title: "Gallery"
 layout: "default"
 ---
 
-<h1>{{ title }}</h1>
-<div class="gallery" style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center;">
+<h1 class="text-3xl font-bold text-center my-8 text-indigo-700">{{ title }}</h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
   {% for photo in collections.photos %}
-    <div class="photo" style="background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0002; padding: 1em; width: 350px;">
-      <img src="{{ photo.data.image }}" alt="{{ photo.data.title }}" style="width: 100%; border-radius: 8px;"/>
-      <div class="title" style="font-size: 1.1em; margin: 0.5em 0;">{{ photo.data.title }}</div>
+    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
+      <img src="{{ photo.data.image }}" alt="{{ photo.data.title }}" class="w-full h-auto max-h-96 object-cover rounded-lg mb-3"/>
+      {% if photo.data.title %}
+        <div class="text-lg font-semibold mb-1 text-center">{{ photo.data.title }}</div>
+      {% endif %}
       {% if photo.data.description %}
-        <div class="desc" style="font-size: 0.95em;">{{ photo.data.description }}</div>
+        <div class="text-sm text-gray-600 text-center">{{ photo.data.description }}</div>
       {% endif %}
     </div>
   {% endfor %}
