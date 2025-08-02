@@ -21,7 +21,12 @@ collections:
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "image", label: "Image", widget: "image" }
-      - { name: "description", label: "Description", widget: "text", required: false }
+      - {
+          name: "description",
+          label: "Description",
+          widget: "text",
+          required: false,
+        }
   - name: "current_events"
     label: "Current Events"
     folder: "src/events/current"
@@ -31,7 +36,12 @@ collections:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "location", label: "Location", widget: "string" }
-      - { name: "description", label: "Description", widget: "text", required: false }
+      - {
+          name: "description",
+          label: "Description",
+          widget: "text",
+          required: false,
+        }
       - { name: "url", label: "Event URL", widget: "string", required: false }
   - name: "past_events"
     label: "Past Events"
@@ -42,17 +52,27 @@ collections:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "location", label: "Location", widget: "string" }
-      - { name: "description", label: "Description", widget: "text", required: false }
+      - {
+          name: "description",
+          label: "Description",
+          widget: "text",
+          required: false,
+        }
       - { name: "url", label: "Event URL", widget: "string", required: false }
-      - name: "music"
-        label: "Music Videos"
+  - name: "music"
+    label: "Music Videos"
     folder: "src/music"
     create: true
     slug: "{{slug}}"
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "youtube_id", label: "YouTube Video ID", widget: "string" }
-      - { name: "description", label: "Description", widget: "text", required: false }
+      - {
+          name: "description",
+          label: "Description",
+          widget: "text",
+          required: false,
+        }
   - label: "Blog"
     name: "blog"
     folder: "src/posts"
