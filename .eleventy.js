@@ -61,7 +61,12 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/events/current/*.md");
   });
   eleventyConfig.addCollection("past_events", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/events/past/*.md");
+    return collectionApi
+      .getFilteredByGlob("src/events/past/*.md")
+      .sort((a, b) => {
+        // Compare dates, descending (newest first)
+        return new Date(b.data.date) - new Date(a.data.date);
+      });
   });
 
   // YAML Data support
